@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="480px" height="480px" viewBox="0 0 480 480" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.3 (11970) - http://www.bohemiancoding.com/sketch -->
+    <title>analysis</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Web-Font" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="ico_analysis" sketch:type="MSArtboardGroup" transform="translate(-40.000000, -40.000000)" fill="#000000">
+            <path d="M468.265,364.195 L265,295 L265,70 C381.685,69.415 488.335,170.23 488.335,288.565 C488.335,319.435 480.265,342.85 468.265,364.195 L468.265,364.195 Z M257.5,490 C153.955,490 70,406.06 70,302.5 C70,208.15 143.755,128.17 235,115 L235,316.435 L425.635,382.825 C400.27,446.92 327.445,490 257.5,490 L257.5,490 Z M232,40 L232,88 C125.815,96.835 40,190.39 40,302.5 C40,422.62 137.38,520 257.5,520 C346.09,520 422.185,466.945 456.07,392 L488,408 C506.395,373.075 520,334.855 520,288.565 C520,151.285 400.075,40 265,40 L232,40 Z" id="analysis" sketch:type="MSShapeGroup"></path>
+        </g>
+    </g>
+</svg>

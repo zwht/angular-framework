@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="480px" height="480px" viewBox="0 0 480 480" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.3 (11970) - http://www.bohemiancoding.com/sketch -->
+    <title>home</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Web-Font" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="ico_home" sketch:type="MSArtboardGroup" transform="translate(-40.000000, -40.000000)" fill="#000000">
+            <path d="M407.395563,460 C407.395563,476.56 393.132121,490 375.542674,490 L184.457326,490 C166.867879,490 152.076754,476.56 152.076754,460 L152.076754,229.375 L280,83.95 L407.923246,228.91 L407.395563,460 L407.395563,460 Z M40,304.855 L62.5144913,326.065 L120.095942,265 L120.095942,460 C120.095942,493.135 149.278433,520 184.457326,520 L375.542674,520 C410.721567,520 439.904058,493.135 439.904058,460 L439.904058,265 L497.485509,326.065 L520,304.855 L280,40 L40,304.855 Z" id="home" sketch:type="MSShapeGroup"></path>
+        </g>
+    </g>
+</svg>

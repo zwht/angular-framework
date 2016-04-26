@@ -1,0 +1,69 @@
+@H1Size: 2.5714em;
+@H2Size: 1.7142em;
+@H3Size: 1.2857em;
+@H4Size: 1em;
+@H5Size: 0.8571em;
+@H6Size: 0.6428em;
+
+@TextSize: 0.875em; //基础字体大小 设置在body上
+
+@BlackColor: #272C2F; //文本色
+@GreenColor: #6ABB4F; //绿色
+@DeepGreen: #85A440; //深绿色
+@LightGreenColor: #44BBAA; //亮绿色ABC46B
+@RedColor: #BB4F4F;   //红色
+@WhiteColor: #FFFFFF; //白色
+@BlueColor: #44839C;  //蓝色
+@OrangeColor: #F78037; //橙色
+@YellowColor: #F7B537; //黄色
+@GreyColor: #A8B5CF;   //灰色
+@DarkGreyColor: #E4E8F0; //浅灰色
+@PurpleColor: #4466BB; //紫色
+
+@BaseSize: 16;
+@BaseColumn: 12; //row组件 按12列分
+
+
+@expanded:18em;
+@smalled:0em;
+@narrow:5em;
+@title:4.4em;
+@smallTitle:3em;
+
+/**
+响应式布局样式变量----------------------------------------------------------------start
+*/
+
+@screen-tiny-min:          8em;//480px
+// 移动屏幕宽度
+@screen-phone-min:          40em;//480px
+// 平板屏幕宽度
+@screen-pad-min:               54.86em;//768px
+// pc屏幕宽度
+@screen-laptop-min:             70.86em;// 992px
+//大屏幕pc屏幕宽度
+@screen-pc-min:               85.72em;//1200px
+
+//** 设置响应布局列数为12列
+@grid-columns:              12;
+//** 设置列的间隙为30
+@grid-gutter-width:         1em;// 14px
+
+// Small screen / tablet
+@container-pad:             (51.42em + @grid-gutter-width);//720px
+
+
+// Medium screen / desktop
+@container-laptop:            (67.14em + @grid-gutter-width);//940px
+
+// Large screen / wide desktop
+@container-pc:      (81.42em + @grid-gutter-width);//1140px
+
+// So media queries don't overlap when required, provide a maximum
+@screen-phone-max:              (@screen-pad-min);
+@screen-pad-max:              (@screen-laptop-min);
+@screen-laptop-max:              (@screen-pc-min);
+@screen-pc-max:              100.14em;
+/**
+响应式布局样式变量----------------------------------------------------------------end
+*/

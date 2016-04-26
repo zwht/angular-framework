@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="480px" height="480px" viewBox="0 0 480 480" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.3 (11970) - http://www.bohemiancoding.com/sketch -->
+    <title>homework</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Web-Font" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="ico_homework" sketch:type="MSArtboardGroup" transform="translate(-40.000000, -40.000000)" fill="#000000">
+            <path d="M490,415 C490,431.56 476.095,439.84 460,445 C460,445 378.355,467.725 295,489.655 L295,115 L460,70 C476.56,70 490,83.44 490,100 L490,415 L490,415 Z M265,489.97 C183.07,467.95 100,445 100,445 C82.96,440.32 70,431.56 70,415 L70,100 C70,83.44 83.44,70 100,70 L265,115 L265,489.97 L265,489.97 Z M460,40 C460,40 373.165,63.91 294.25,85 C284.365,85.375 274.405,85 264.505,85 C189.325,64.84 100,40 100,40 C66.865,40 40,66.865 40,100 L40,415 C40,448.135 68.275,464.695 100,475 C100,475 180.895,497.5 264.505,520 L294.88,520 C379.18,497.5 460,475 460,475 C490.795,467.035 520,448.135 520,415 L520,100 C520,66.865 493.135,40 460,40 L460,40 Z" id="homework" sketch:type="MSShapeGroup"></path>
+        </g>
+    </g>
+</svg>

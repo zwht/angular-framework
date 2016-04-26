@@ -1,0 +1,35 @@
+div.icon-container
+    if icons
+        each val in icons
+            .demo-icon
+                != '<i class="icon icon-' + val+'"></i><span>icon-' + val+'</span>'
+
+style.
+
+    .demo-icon{
+        width:10em;
+        display:inline-block;
+        vertical-align:bottom;
+        margin:1em;
+        text-align:center;
+    }
+    .demo-icon .icon{
+        font-size:2em;
+    }
+    .demo-icon span{
+        display:block;
+        white-space:nowrap;
+    }
+    .icon-container{
+        text-align:center;
+    }
+    .icon-container:after{
+
+        content:"";
+        display:block;
+        clear:both;
+        width:0;
+        height:0;
+    }
+
+

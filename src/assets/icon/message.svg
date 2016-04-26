@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="480px" height="480px" viewBox="0 0 480 480" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.3 (11970) - http://www.bohemiancoding.com/sketch -->
+    <title>message</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Web-Font" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="ico_message" sketch:type="MSArtboardGroup" transform="translate(-40.000000, -40.000000)" fill="#000000">
+            <path d="M400,220 C383.44,220 370,233.44 370,250 C370,266.56 383.44,280 400,280 C416.56,280 430,266.56 430,250 C430,233.44 416.56,220 400,220 L400,220 Z M280,430 C262.48,430 245.56,427.96 229.3,424.495 L158.68,466.945 L159.625,397.36 C105.49,364.81 70,310.99 70,250 C70,150.595 164.02,70 280,70 C395.98,70 490,150.595 490,250 C490,349.42 395.98,430 280,430 L280,430 Z M280,40 C147.46,40 40,134.035 40,250 C40,316.285 75.175,375.31 130,413.785 L130,520 L235.135,456.205 C249.685,458.605 264.655,460 280,460 C412.54,460 520,365.98 520,250 C520,134.035 412.54,40 280,40 L280,40 Z M160,220 C143.44,220 130,233.44 130,250 C130,266.56 143.44,280 160,280 C176.56,280 190,266.56 190,250 C190,233.44 176.56,220 160,220 L160,220 Z M280,220 C263.44,220 250,233.44 250,250 C250,266.56 263.44,280 280,280 C296.56,280 310,266.56 310,250 C310,233.44 296.56,220 280,220 L280,220 Z" id="message" sketch:type="MSShapeGroup"></path>
+        </g>
+    </g>
+</svg>
