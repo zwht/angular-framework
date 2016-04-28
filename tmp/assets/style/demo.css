@@ -1,3 +1,18 @@
+header.logo {
+  line-height: 6em;
+  padding: 0 1em;
+  background: #000000;
+  color: #eeeeee;
+}
+footer.logo {
+  padding: 0 1em;
+  color: #ffffff;
+}
+section.container {
+  display: block;
+  padding: 1em;
+  min-height: 60em;
+}
 .chart-test {
   background: #EDEDED;
 }
@@ -57,4 +72,203 @@
 }
 .sectorChart3Tag span {
   color: #c00;
+}
+/* make our pages be full width and full height */
+/* positioned absolutely so that the pages can overlap each other as they enter and leave */
+.page {
+  bottom: 0;
+  position: absolute;
+  text-align: center;
+  top: 0;
+  width: 100%;
+}
+.page h1 {
+  font-size: 60px;
+}
+.page a {
+  margin-top: 50px;
+}
+/* PAGES (specific colors for each page)
+============================================================================= */
+/*.page_chang01     { background:#00D0BC; color:#00907c; }
+.page_chang02     { background:#E59400; color:#a55400; }
+.page_chang03     { background:#ffa6bb; color:#9e0000; }*/
+/* ANIMATIONS
+============================================================================= */
+/* leaving animations ----------------------------------------- */
+/* rotate and fall */
+@-webkit-keyframes rotateFall {
+  0% {
+    -webkit-transform: rotateZ(0deg);
+            transform: rotateZ(0deg);
+  }
+  20% {
+    -webkit-transform: rotateZ(10deg);
+            transform: rotateZ(10deg);
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+  }
+  40% {
+    -webkit-transform: rotateZ(17deg);
+            transform: rotateZ(17deg);
+  }
+  60% {
+    -webkit-transform: rotateZ(16deg);
+            transform: rotateZ(16deg);
+  }
+  100% {
+    -webkit-transform: translateY(100%) rotateZ(17deg);
+            transform: translateY(100%) rotateZ(17deg);
+  }
+}
+@keyframes rotateFall {
+  0% {
+    -webkit-transform: rotateZ(0deg);
+            transform: rotateZ(0deg);
+  }
+  20% {
+    -webkit-transform: rotateZ(10deg);
+            transform: rotateZ(10deg);
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+  }
+  40% {
+    -webkit-transform: rotateZ(17deg);
+            transform: rotateZ(17deg);
+  }
+  60% {
+    -webkit-transform: rotateZ(16deg);
+            transform: rotateZ(16deg);
+  }
+  100% {
+    -webkit-transform: translateY(100%) rotateZ(17deg);
+            transform: translateY(100%) rotateZ(17deg);
+  }
+}
+/* slide in from the bottom */
+@-webkit-keyframes slideOutLeft {
+  to {
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+  }
+}
+@keyframes slideOutLeft {
+  to {
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+  }
+}
+/* rotate out newspaper */
+@-webkit-keyframes rotateOutNewspaper {
+  to {
+    -webkit-transform: translateZ(-3000px) rotateZ(360deg);
+            transform: translateZ(-3000px) rotateZ(360deg);
+    opacity: 0;
+  }
+}
+@keyframes rotateOutNewspaper {
+  to {
+    -webkit-transform: translateZ(-3000px) rotateZ(360deg);
+            transform: translateZ(-3000px) rotateZ(360deg);
+    opacity: 0;
+  }
+}
+/* entering animations --------------------------------------- */
+/* scale up */
+@-webkit-keyframes scaleUp {
+  from {
+    opacity: 0.3;
+    -webkit-transform: scale(0.8);
+  }
+}
+@keyframes scaleUp {
+  from {
+    opacity: 0.3;
+    -webkit-transform: scale(0.8);
+  }
+}
+/* slide in from the right */
+@-webkit-keyframes slideInRight {
+  from {
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+  }
+  to {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+@keyframes slideInRight {
+  from {
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+  }
+  to {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+/* slide in from the bottom */
+@-webkit-keyframes slideInUp {
+  from {
+    -webkit-transform: translateY(100%);
+            transform: translateY(100%);
+  }
+  to {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+@keyframes slideInUp {
+  from {
+    -webkit-transform: translateY(100%);
+            transform: translateY(100%);
+  }
+  to {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+.ng-enter {
+  z-index: 8888;
+}
+.ng-leave {
+  z-index: 9999;
+}
+/* page specific animations ------------------------ */
+/* home -------------------------- */
+.page_chang01.ng-enter {
+  -webkit-animation-name: rollIn 0.5s both ease-in;
+          animation-name: rollIn 0.5s both ease-in;
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
+}
+.page_chang01.ng-leave {
+  -webkit-animation: rollOut 0.5s both ease-in;
+          animation: rollOut 0.5s both ease-in;
+}
+/* about ------------------------ */
+.page_chang02.ng-enter {
+  -webkit-animation: zoomInDown 0.5s both ease-in;
+          animation: zoomInDown 0.5s both ease-in;
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
+}
+.page_chang02.ng-leave {
+  -webkit-animation: zoomOutDown 0.5s both ease-in;
+          animation: zoomOutDown 0.5s both ease-in;
+}
+/* contact ---------------------- */
+.page_chang03.ng-enter {
+  -webkit-animation: rotateOut 0.5s both ease-in;
+          animation: rotateOut 0.5s both ease-in;
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
+}
+.page_chang03.ng-leave {
+  -webkit-animation: rotateIn 0.5s both ease-in;
+          animation: rotateIn 0.5s both ease-in;
+}
+body {
+  background: #c00;
 }

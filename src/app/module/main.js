@@ -1,6 +1,7 @@
 var md=angular.module("web.main",[
     "ngRoute",
     "ngResource",
+    "ngAnimate",
     "web.common",
     "web.demo",
     "httpException",

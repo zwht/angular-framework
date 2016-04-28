@@ -1,14 +1,14 @@
 (function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
 
 
-({"..":({"controller":({"common":({"c404Ctrl":require("../controller/common/c404Ctrl.js")}),"demo":({"iconCtrl":require("../controller/demo/iconCtrl.js"),"indexCtrl":require("../controller/demo/indexCtrl.js")}),"main":(function () {var f = require("../controller/main/index.js");f["index"]=require("../controller/main/index.js");return f;})()}),"servers":({"common":require("../servers/common.js")}),"plugin":({"backTop":require("../plugin/backTop.js"),"comment":require("../plugin/comment.js"),"dataExport":require("../plugin/dataExport.js"),"dialog":require("../plugin/dialog.js"),"flag":require("../plugin/flag.js"),"httpException":require("../plugin/httpException.js"),"loading":require("../plugin/loading.js"),"md5":require("../plugin/md5.js"),"menu":require("../plugin/menu.js"),"notifier":require("../plugin/notifier.js"),"query":require("../plugin/query.js"),"resize":require("../plugin/resize.js"),"routeAuthorize":require("../plugin/routeAuthorize.js"),"serverInject":require("../plugin/serverInject.js"),"session":require("../plugin/session.js"),"titleInject":require("../plugin/titleInject.js"),"tokenInject":require("../plugin/tokenInject.js")}),"directives":({"testZrender":require("../directives/testZrender.js")})})});
+({"..":({"controller":({"common":({"c404Ctrl":require("../controller/common/c404Ctrl.js")}),"demo":({"iconCtrl":require("../controller/demo/iconCtrl.js"),"indexCtrl":require("../controller/demo/indexCtrl.js"),"pageChange01Ctrl":require("../controller/demo/pageChange01Ctrl.js"),"pageChange02Ctrl":require("../controller/demo/pageChange02Ctrl.js"),"pageChange03Ctrl":require("../controller/demo/pageChange03Ctrl.js")}),"main":(function () {var f = require("../controller/main/index.js");f["index"]=require("../controller/main/index.js");return f;})()}),"servers":({"common":require("../servers/common.js")}),"plugin":({"backTop":require("../plugin/backTop.js"),"comment":require("../plugin/comment.js"),"dataExport":require("../plugin/dataExport.js"),"dialog":require("../plugin/dialog.js"),"flag":require("../plugin/flag.js"),"httpException":require("../plugin/httpException.js"),"loading":require("../plugin/loading.js"),"md5":require("../plugin/md5.js"),"menu":require("../plugin/menu.js"),"notifier":require("../plugin/notifier.js"),"query":require("../plugin/query.js"),"resize":require("../plugin/resize.js"),"routeAuthorize":require("../plugin/routeAuthorize.js"),"serverInject":require("../plugin/serverInject.js"),"session":require("../plugin/session.js"),"titleInject":require("../plugin/titleInject.js"),"tokenInject":require("../plugin/tokenInject.js")}),"directives":({"testZrender":require("../directives/testZrender.js")})})});
 
 //require("../module/main.js");
 
 module.exports={};
 
 
-},{"../controller/common/c404Ctrl.js":9,"../controller/demo/iconCtrl.js":10,"../controller/demo/indexCtrl.js":11,"../controller/main/index.js":12,"../directives/testZrender.js":13,"../plugin/backTop.js":17,"../plugin/comment.js":18,"../plugin/dataExport.js":19,"../plugin/dialog.js":20,"../plugin/flag.js":21,"../plugin/httpException.js":22,"../plugin/loading.js":23,"../plugin/md5.js":24,"../plugin/menu.js":25,"../plugin/notifier.js":26,"../plugin/query.js":27,"../plugin/resize.js":28,"../plugin/routeAuthorize.js":29,"../plugin/serverInject.js":30,"../plugin/session.js":31,"../plugin/titleInject.js":32,"../plugin/tokenInject.js":33,"../servers/common.js":34}],2:[function(require,module,exports){
+},{"../controller/common/c404Ctrl.js":9,"../controller/demo/iconCtrl.js":10,"../controller/demo/indexCtrl.js":11,"../controller/demo/pageChange01Ctrl.js":12,"../controller/demo/pageChange02Ctrl.js":13,"../controller/demo/pageChange03Ctrl.js":14,"../controller/main/index.js":15,"../directives/testZrender.js":16,"../plugin/backTop.js":20,"../plugin/comment.js":21,"../plugin/dataExport.js":22,"../plugin/dialog.js":23,"../plugin/flag.js":24,"../plugin/httpException.js":25,"../plugin/loading.js":26,"../plugin/md5.js":27,"../plugin/menu.js":28,"../plugin/notifier.js":29,"../plugin/query.js":30,"../plugin/resize.js":31,"../plugin/routeAuthorize.js":32,"../plugin/serverInject.js":33,"../plugin/session.js":34,"../plugin/titleInject.js":35,"../plugin/tokenInject.js":36,"../servers/common.js":37}],2:[function(require,module,exports){
 (function (Buffer){
 (function(){
   var crypt = require('crypt'),
@@ -2084,7 +2084,7 @@ c404Ctrl.$inject = ["$scope"];
 function c404Ctrl($scope) {
 	console.log("c404Ctrl");
 }
-},{"../../module/common":14}],10:[function(require,module,exports){
+},{"../../module/common":17}],10:[function(require,module,exports){
 var md = require("../../module/demo");
 md.controller("demoIconCtrl", demoIconCtrl);
 
@@ -2092,18 +2092,46 @@ demoIconCtrl.$inject = ["$scope"];
 function demoIconCtrl($scope) {
 	console.log("demoIconCtrl");
 }
-},{"../../module/demo":15}],11:[function(require,module,exports){
+},{"../../module/demo":18}],11:[function(require,module,exports){
 var md = require("../../module/demo");
 md.controller("demoIndexCtrl", demoIndexCtrl);
 
 demoIndexCtrl.$inject = ["$scope","$location"];
 function demoIndexCtrl($scope,$location) {
     console.log("demoIndexCtrl");
+    $scope.pageClass="dome_index"
     $scope.goTo=function(){
         $location.path("/404")
     }
 }
-},{"../../module/demo":15}],12:[function(require,module,exports){
+},{"../../module/demo":18}],12:[function(require,module,exports){
+var md = require("../../module/demo");
+md.controller("pageChang01Ctrl", pageChang01Ctrl);
+
+pageChang01Ctrl.$inject = ["$scope","$location"];
+function pageChang01Ctrl($scope,$location) {
+    console.log("pageChang01Ctrl");
+    $scope.pageClass="page_chang01";
+}
+},{"../../module/demo":18}],13:[function(require,module,exports){
+var md = require("../../module/demo");
+md.controller("pageChang02Ctrl", pageChang02Ctrl);
+
+pageChang02Ctrl.$inject = ["$scope","$location"];
+function pageChang02Ctrl($scope,$location) {
+    console.log("pageChang02Ctrl");
+    $scope.pageClass="page_chang02";
+}
+},{"../../module/demo":18}],14:[function(require,module,exports){
+var md = require("../../module/demo");
+md.controller("pageChang03Ctrl", pageChang03Ctrl);
+
+pageChang03Ctrl.$inject = ["$scope","$location"];
+function pageChang03Ctrl($scope,$location) {
+    console.log("pageChang03Ctrl");
+    $scope.pageClass="page_chang03";
+}
+},{"../../module/demo":18}],15:[function(require,module,exports){
 var md = require("../../module/main");
 md.controller("indexCtrl", indexCtrl);
 
@@ -2116,11 +2144,13 @@ function indexCtrl($scope,commonService) {
 		function(datas) {
 			//没有查询到年级
 			console.log(datas);
+
+
 		},
 		function(err) {
 		});
 }
-},{"../../module/main":16}],13:[function(require,module,exports){
+},{"../../module/main":19}],16:[function(require,module,exports){
 var md = require("../module/common");
 //最基本简单折线图在图表dome演示里有
 md.directive("brokenLineChart", function () {
@@ -2163,7 +2193,7 @@ md.directive("brokenLineChart", function () {
 });
 
 module.exports = md;
-},{"../../extends/chart/brokenLineChart":35,"../module/common":14}],14:[function(require,module,exports){
+},{"../../extends/chart/brokenLineChart":38,"../module/common":17}],17:[function(require,module,exports){
 var md=angular.module("web.common",[]);
 
 md.config(["$routeProvider",config]);
@@ -2173,7 +2203,7 @@ function config(route){
 }
 
 module.exports=md;
-},{}],15:[function(require,module,exports){
+},{}],18:[function(require,module,exports){
 var md=angular.module("web.demo",[]);
 
 md.config(config);
@@ -2182,14 +2212,18 @@ function config($routeProvider) {
     $routeProvider  
         .when("/demo",{templateUrl:"page/demo/index.html",controller:"demoIndexCtrl",menu:"demo.index"})
         .when("/demo/icon",{templateUrl:"page/demo/icon.html",controller:"demoIconCtrl",menu:"demo.icon"})
+        .when("/demo/change01",{templateUrl:"page/demo/change01.html",controller:"pageChang01Ctrl",menu:"demo.change01"})
+        .when("/demo/change02",{templateUrl:"page/demo/change02.html",controller:"pageChang02Ctrl",menu:"demo.change02"})
+        .when("/demo/change03",{templateUrl:"page/demo/change03.html",controller:"pageChang03Ctrl",menu:"demo.change03"})
 
 }
 
 module.exports=md;
-},{}],16:[function(require,module,exports){
+},{}],19:[function(require,module,exports){
 var md=angular.module("web.main",[
     "ngRoute",
     "ngResource",
+    "ngAnimate",
     "web.common",
     "web.demo",
     "httpException",
@@ -2243,7 +2277,7 @@ function config($routeProvider) {
 
 module.exports=md;
 
-},{}],17:[function(require,module,exports){
+},{}],20:[function(require,module,exports){
 /**
  * @ngdoc module
  * @name backTop
@@ -2376,7 +2410,7 @@ function backTop() {
         return createBackTop;
     }];
 }
-},{}],18:[function(require,module,exports){
+},{}],21:[function(require,module,exports){
 /**
  * @ngdoc module
  * @name backTop
@@ -2521,7 +2555,7 @@ function comment() {
 
 
 
-},{}],19:[function(require,module,exports){
+},{}],22:[function(require,module,exports){
 /**
 /* @module plugins
 * change log
@@ -2649,7 +2683,7 @@ function dataExport(){
 
 module.exports=md;
 
-},{}],20:[function(require,module,exports){
+},{}],23:[function(require,module,exports){
 var md=angular.module("dialog",[]);
 
 md.provider('dialog', dialogProvider);
@@ -2722,7 +2756,7 @@ function dialogProvider() {
 
 
 }
-},{}],21:[function(require,module,exports){
+},{}],24:[function(require,module,exports){
 /**
  * @ngdoc module
  * @name flag
@@ -2765,7 +2799,7 @@ function flagProvider(){
         return agl;
     }];
 }
-},{}],22:[function(require,module,exports){
+},{}],25:[function(require,module,exports){
 /**
  * http拦截器
  * 处理response返回错误码处理
@@ -2814,7 +2848,7 @@ function httpExceptionProvider(){
 module.exports=md;
 
 
-},{}],23:[function(require,module,exports){
+},{}],26:[function(require,module,exports){
 
 var md=angular.module("loading",[]);
 md.provider("loading",loadingProvider);
@@ -2867,7 +2901,7 @@ function loadingProvider(){
 }
 
 module.exports=md;
-},{}],24:[function(require,module,exports){
+},{}],27:[function(require,module,exports){
 var md=angular.module("md5",[]);
 var md5=require("MD5");
 var sc=this;
@@ -2879,7 +2913,7 @@ md.service('md5', [function(flag){
 }])
 
 module.exports=md;
-},{"MD5":2}],25:[function(require,module,exports){
+},{"MD5":2}],28:[function(require,module,exports){
 /**
 * @module plugins
 */
@@ -3118,7 +3152,7 @@ function menuDirective(menu, $parse) {
 
 module.exports=md;
 
-},{}],26:[function(require,module,exports){
+},{}],29:[function(require,module,exports){
 var md=angular.module("notifier",[]);
 
 md.provider("notifier",Notifier);
@@ -3171,7 +3205,7 @@ function Notifier(){
     }];
 
 }
-},{}],27:[function(require,module,exports){
+},{}],30:[function(require,module,exports){
 var md=angular.module("query",[]);
 
 md.service('query', ["flag",function(flag){
@@ -3193,7 +3227,7 @@ md.service('query', ["flag",function(flag){
 }]);
 
 module.exports=md;
-},{}],28:[function(require,module,exports){
+},{}],31:[function(require,module,exports){
 var md = angular.module("resize", []);
 md.provider("resize", resizeProvider);
 
@@ -3231,7 +3265,7 @@ function resizeProvider() {
 }
 
 module.exports = md;
-},{}],29:[function(require,module,exports){
+},{}],32:[function(require,module,exports){
 
 var md=angular.module("routeAuthorize",[]);
 md.provider("routeAuthorize",routeAuthorizeProvider);
@@ -3304,7 +3338,7 @@ function routeAuthorizeProvider(){
 
 module.exports=md;
 
-},{}],30:[function(require,module,exports){
+},{}],33:[function(require,module,exports){
 var md=angular.module("serverInject",[]);
 
 
@@ -3369,7 +3403,7 @@ function serverInject(){
 
 module.exports=md;
 
-},{}],31:[function(require,module,exports){
+},{}],34:[function(require,module,exports){
 /**
 * 在浏览器中保存会话值
 * 
@@ -3546,7 +3580,7 @@ function sessionProvider(){
     }
 
 }
-},{}],32:[function(require,module,exports){
+},{}],35:[function(require,module,exports){
 
 var md=angular.module("titleInject",[]);
 md.provider("routeInjectTitle",routeAuthorizeProvider);
@@ -3603,7 +3637,7 @@ function routeAuthorizeProvider(){
 }
 
 module.exports=md;
-},{}],33:[function(require,module,exports){
+},{}],36:[function(require,module,exports){
 var md=angular.module("tokenInject",[]);
 md.provider("tokenInject",tokenInjectProvider);
 md.config(["$httpProvider",httpConfig]);
@@ -3655,7 +3689,7 @@ function tokenInjectProvider(){
 
 module.exports=md;
 
-},{}],34:[function(require,module,exports){
+},{}],37:[function(require,module,exports){
 var md = require("../module/common");
 md.service("commonService", commonService);
 
@@ -3676,7 +3710,7 @@ function commonService($resource) {
     this.classSearch = $resource("rest/class/search");
 }
 
-},{"../module/common":14}],35:[function(require,module,exports){
+},{"../module/common":17}],38:[function(require,module,exports){
 /**
  * zrender扩展
  * @module zrender
@@ -3846,7 +3880,7 @@ function BrokenLineChart(config) {
 }
 
 module.exports = BrokenLineChart;
-},{"./../zrender/Group":38,"./../zrender/shape/Circle":51,"./../zrender/shape/Polyline":55,"./../zrender/shape/Rectangle":56,"./../zrender/zrender":71,"./tool/Axis":36,"./tool/Scale":37}],36:[function(require,module,exports){
+},{"./../zrender/Group":41,"./../zrender/shape/Circle":54,"./../zrender/shape/Polyline":58,"./../zrender/shape/Rectangle":59,"./../zrender/zrender":74,"./tool/Axis":39,"./tool/Scale":40}],39:[function(require,module,exports){
 /**
  * zrender扩展
  * @module zrender
@@ -3976,7 +4010,7 @@ Axis.prototype = {
 };
 
 module.exports=Axis;
-},{"./../../zrender/Group":38,"./../../zrender/shape/Line":53,"./../../zrender/shape/Text":57}],37:[function(require,module,exports){
+},{"./../../zrender/Group":41,"./../../zrender/shape/Line":56,"./../../zrender/shape/Text":60}],40:[function(require,module,exports){
 /**
  * @module zrender
  * **/
@@ -4070,7 +4104,7 @@ Scale.prototype = {
     }
 };
 module.exports=Scale;
-},{}],38:[function(require,module,exports){
+},{}],41:[function(require,module,exports){
 /**
  * Group是一个容器，可以插入子节点，Group的变换也会被应用到子节点上
  * @module zrender/Group
@@ -4302,7 +4336,7 @@ util.merge(Group.prototype, Eventful.prototype, true);
 
 module.exports = Group;
 
-},{"./mixin/Eventful":48,"./mixin/Transformable":49,"./tool/guid":66,"./tool/util":69}],39:[function(require,module,exports){
+},{"./mixin/Eventful":51,"./mixin/Transformable":52,"./tool/guid":69,"./tool/util":72}],42:[function(require,module,exports){
 /**
  * Handler控制模块
  * @module zrender/Handler
@@ -5232,7 +5266,7 @@ util.merge(Handler.prototype, Eventful.prototype, true);
 
 module.exports = Handler;
 
-},{"./config":46,"./mixin/Eventful":48,"./tool/env":64,"./tool/event":65,"./tool/matrix":68,"./tool/util":69,"./tool/vector":70}],40:[function(require,module,exports){
+},{"./config":49,"./mixin/Eventful":51,"./tool/env":67,"./tool/event":68,"./tool/matrix":71,"./tool/util":72,"./tool/vector":73}],43:[function(require,module,exports){
 /**
  * @module zrender/Layer
  * @author pissang(https://www.github.com/pissang)
@@ -5445,7 +5479,7 @@ util.merge(Layer.prototype, Transformable.prototype);
 
 module.exports = Layer;
 
-},{"./config":46,"./mixin/Transformable":49,"./tool/util":69}],41:[function(require,module,exports){
+},{"./config":49,"./mixin/Transformable":52,"./tool/util":72}],44:[function(require,module,exports){
 /**
  * Painter绘图模块
  * @module zrender/Painter
@@ -6240,7 +6274,7 @@ Painter.prototype._createShapeToImageProcessor = function () {
 
 module.exports = Painter;
 
-},{"./Layer":40,"./config":46,"./loadingEffect/Base":47,"./shape/Image":52,"./tool/log":67,"./tool/util":69}],42:[function(require,module,exports){
+},{"./Layer":43,"./config":49,"./loadingEffect/Base":50,"./shape/Image":55,"./tool/log":70,"./tool/util":72}],45:[function(require,module,exports){
 /**
  * Storage内容仓库模块
  * @module zrender/Storage
@@ -6651,7 +6685,7 @@ Storage.prototype.dispose = function () {
 module.exports = Storage;
 
 
-},{"./Group":38,"./tool/util":69}],43:[function(require,module,exports){
+},{"./Group":41,"./tool/util":72}],46:[function(require,module,exports){
 /**
  * 动画主类, 调度和管理所有动画控制器
  *
@@ -7247,7 +7281,7 @@ Animator.prototype = {
 module.exports = Animation;
 
 
-},{"../tool/color":62,"../tool/event":65,"../tool/util":69,"./Clip":44}],44:[function(require,module,exports){
+},{"../tool/color":65,"../tool/event":68,"../tool/util":72,"./Clip":47}],47:[function(require,module,exports){
 /**
  * 动画主控制器
  * @config target 动画对象，可以是数组，如果是数组的话会批量分发onframe等事件
@@ -7346,7 +7380,7 @@ Clip.prototype = {
 module.exports = Clip;
 
 
-},{"./easing":45}],45:[function(require,module,exports){
+},{"./easing":48}],48:[function(require,module,exports){
 /**
  * 缓动代码来自 https://github.com/sole/tween.js/blob/master/src/Tween.js
  * @see http://sole.github.io/tween.js/examples/03_graphs.html
@@ -7695,7 +7729,7 @@ module.exports = easing;
 
 
 
-},{}],46:[function(require,module,exports){
+},{}],49:[function(require,module,exports){
 /**
  * config默认配置项
  * @exports zrender/config
@@ -7813,7 +7847,7 @@ var config = {
 module.exports = config;
 
 
-},{}],47:[function(require,module,exports){
+},{}],50:[function(require,module,exports){
 /**
  * zrender: loading特效类
  *
@@ -7974,7 +8008,7 @@ Base.prototype.getLocation = function (loc, totalWidth, totalHeight) {
 module.exports = Base;
 
 
-},{"../shape/Rectangle":56,"../shape/Text":57,"../tool/util":69}],48:[function(require,module,exports){
+},{"../shape/Rectangle":59,"../shape/Text":60,"../tool/util":72}],51:[function(require,module,exports){
 /**
  * 事件扩展
  * @module zrender/mixin/Eventful
@@ -8242,7 +8276,7 @@ Eventful.prototype.dispatchWithContext = function (type) {
 
 module.exports = Eventful;
 
-},{}],49:[function(require,module,exports){
+},{}],52:[function(require,module,exports){
 /**
  * 提供变换扩展
  * @module zrender/mixin/Transformable
@@ -8483,7 +8517,7 @@ Transformable.prototype = {
 
 module.exports = Transformable;
 
-},{"../tool/matrix":68,"../tool/vector":70}],50:[function(require,module,exports){
+},{"../tool/matrix":71,"../tool/vector":73}],53:[function(require,module,exports){
 /**
  * shape基类
  * @module zrender/shape/Base
@@ -9141,7 +9175,7 @@ util.merge(Base.prototype, Eventful.prototype, true);
 
 module.exports = Base;
 
-},{"../mixin/Eventful":48,"../mixin/Transformable":49,"../tool/area":61,"../tool/color":62,"../tool/guid":66,"../tool/log":67,"../tool/matrix":68,"../tool/util":69}],51:[function(require,module,exports){
+},{"../mixin/Eventful":51,"../mixin/Transformable":52,"../tool/area":64,"../tool/color":65,"../tool/guid":69,"../tool/log":70,"../tool/matrix":71,"../tool/util":72}],54:[function(require,module,exports){
 /**
  * 圆形
  * @module zrender/shape/Circle
@@ -9257,7 +9291,7 @@ require('../tool/util').inherits(Circle, Base);
 module.exports = Circle;
 
 
-},{"../tool/util":69,"./Base":50}],52:[function(require,module,exports){
+},{"../tool/util":72,"./Base":53}],55:[function(require,module,exports){
 /**
  * 图片绘制
  * @module zrender/shape/Image
@@ -9458,7 +9492,7 @@ ZImage.prototype = {
 require('../tool/util').inherits(ZImage, Base);
 module.exports = ZImage;
 
-},{"../tool/util":69,"./Base":50}],53:[function(require,module,exports){
+},{"../tool/util":72,"./Base":53}],56:[function(require,module,exports){
 /**
  * 直线
  * @module zrender/shape/Line
@@ -9579,7 +9613,7 @@ require('../tool/util').inherits(Line, Base);
 module.exports = Line;
 
 
-},{"../tool/util":69,"./Base":50,"./util/dashedLineTo":58}],54:[function(require,module,exports){
+},{"../tool/util":72,"./Base":53,"./util/dashedLineTo":61}],57:[function(require,module,exports){
 /**
  * 多边形
  * @module zrender/shape/Polygon
@@ -9792,7 +9826,7 @@ module.exports = Polygon;
 
 
 
-},{"../tool/util":69,"./Base":50,"./util/dashedLineTo":58,"./util/smoothBezier":59,"./util/smoothSpline":60}],55:[function(require,module,exports){
+},{"../tool/util":72,"./Base":53,"./util/dashedLineTo":61,"./util/smoothBezier":62,"./util/smoothSpline":63}],58:[function(require,module,exports){
 /**
  * 折线
  * @author Kener (@Kener-林峰, kener.linfeng@gmail.com)
@@ -9949,7 +9983,7 @@ require('../tool/util').inherits(Polyline, Base);
 module.exports = Polyline;
 
 
-},{"../tool/util":69,"./Base":50,"./Polygon":54,"./util/dashedLineTo":58,"./util/smoothBezier":59,"./util/smoothSpline":60}],56:[function(require,module,exports){
+},{"../tool/util":72,"./Base":53,"./Polygon":57,"./util/dashedLineTo":61,"./util/smoothBezier":62,"./util/smoothSpline":63}],59:[function(require,module,exports){
 /**
  * 矩形
  * @module zrender/shape/Rectangle
@@ -10152,7 +10186,7 @@ Rectangle.prototype = {
 require('../tool/util').inherits(Rectangle, Base);
 module.exports = Rectangle;
 
-},{"../tool/util":69,"./Base":50}],57:[function(require,module,exports){
+},{"../tool/util":72,"./Base":53}],60:[function(require,module,exports){
 /**
  * @module zrender/shape/Text
  * @author Kener (@Kener-林峰, kener.linfeng@gmail.com)
@@ -10363,7 +10397,7 @@ module.exports = Text;
 
 
 
-},{"../tool/area":61,"../tool/util":69,"./Base":50}],58:[function(require,module,exports){
+},{"../tool/area":64,"../tool/util":72,"./Base":53}],61:[function(require,module,exports){
 /**
  * 虚线lineTo
  *
@@ -10411,7 +10445,7 @@ module.exports = function (ctx, x1, y1, x2, y2, dashLength) {
 };
 
 
-},{}],59:[function(require,module,exports){
+},{}],62:[function(require,module,exports){
 /**
  * 贝塞尔平滑曲线
  * @module zrender/shape/util/smoothBezier
@@ -10513,7 +10547,7 @@ module.exports = function (points, smooth, isLoop, constraint) {
 };
 
 
-},{"../../tool/vector":70}],60:[function(require,module,exports){
+},{"../../tool/vector":73}],63:[function(require,module,exports){
 /**
  * Catmull-Rom spline 插值折线
  * @module zrender/shape/util/smoothSpline
@@ -10595,7 +10629,7 @@ module.exports = function (points, isLoop, constraint) {
 };
 
 
-},{"../../tool/vector":70}],61:[function(require,module,exports){
+},{"../../tool/vector":73}],64:[function(require,module,exports){
 /**
  * zrender: 图形空间辅助类
  *
@@ -11413,7 +11447,7 @@ module.exports = {
     isInsideQuadraticStroke: isInsideQuadraticStroke
 };
 
-},{"./curve":63,"./util":69}],62:[function(require,module,exports){
+},{"./curve":66,"./util":72}],65:[function(require,module,exports){
 /**
  * 颜色辅助模块
  * @module zrender/tool/color
@@ -12488,7 +12522,7 @@ module.exports = {
 };
 
 
-},{"../tool/util":69}],63:[function(require,module,exports){
+},{"../tool/util":72}],66:[function(require,module,exports){
 /**
  * 曲线辅助模块
  * @module zrender/tool/curve
@@ -13022,7 +13056,7 @@ module.exports = {
     quadraticProjectPoint: quadraticProjectPoint
 };
 
-},{"./vector":70}],64:[function(require,module,exports){
+},{"./vector":73}],67:[function(require,module,exports){
 /**
  * echarts设备环境识别
  *
@@ -13141,7 +13175,7 @@ function detect(ua) {
 
 module.exports = detect(navigator.userAgent);
 
-},{}],65:[function(require,module,exports){
+},{}],68:[function(require,module,exports){
 /**
  * 事件辅助类
  * @module zrender/tool/event
@@ -13208,7 +13242,7 @@ module.exports = {
 };
 
 
-},{"../mixin/Eventful":48}],66:[function(require,module,exports){
+},{"../mixin/Eventful":51}],69:[function(require,module,exports){
 /**
  * zrender: 生成唯一id
  *
@@ -13223,7 +13257,7 @@ module.exports = function () {
 };
 
 
-},{}],67:[function(require,module,exports){
+},{}],70:[function(require,module,exports){
 var config = require('../config');
 
 /**
@@ -13257,7 +13291,7 @@ module.exports = function () {
  */
 
 
-},{"../config":46}],68:[function(require,module,exports){
+},{"../config":49}],71:[function(require,module,exports){
 var ArrayCtor = typeof Float32Array === 'undefined' ? Array : Float32Array;
 /**
  * 3x2矩阵操作类
@@ -13424,7 +13458,7 @@ var matrix = {
 
 module.exports = matrix;
 
-},{}],69:[function(require,module,exports){
+},{}],72:[function(require,module,exports){
 /**
  * zrender: 公共辅助函数
  *
@@ -13664,7 +13698,7 @@ module.exports = {
 };
 
 
-},{}],70:[function(require,module,exports){
+},{}],73:[function(require,module,exports){
 var ArrayCtor = typeof Float32Array === 'undefined' ? Array : Float32Array;
 
 /**
@@ -13935,7 +13969,7 @@ vector.distSquare = vector.distanceSquare;
 module.exports = vector;
 
 
-},{}],71:[function(require,module,exports){
+},{}],74:[function(require,module,exports){
 /*!
  * ZRender, a high performance canvas library.
  *  
@@ -14531,4 +14565,4 @@ ZRender.prototype.dispose = function () {
 module.exports = zrender;
 
 
-},{"./Handler":39,"./Painter":41,"./Storage":42,"./animation/Animation":43,"./tool/env":64,"./tool/guid":66,"./tool/log":67,"./tool/util":69}]},{},[1]);
+},{"./Handler":42,"./Painter":44,"./Storage":45,"./animation/Animation":46,"./tool/env":67,"./tool/guid":69,"./tool/log":70,"./tool/util":72}]},{},[1]);

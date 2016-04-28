@@ -10,6 +10,8 @@ function indexCtrl($scope,commonService) {
 		function(datas) {
 			//没有查询到年级
 			console.log(datas);
+
+
 		},
 		function(err) {
 		});
