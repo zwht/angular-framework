@@ -1,10 +1,10 @@
 @font-face {
 	font-family: "icon";
 	src: url('./icon.eot');
-	src: url('./icon.eot?time=1461807475111#iefix') format('eot'),
-		url('./icon.woff?time=1461807475111') format('woff'),
-		url('./icon.ttf?time=1461807475111') format('truetype'),
-		url('./icon.svg?time=1461807475111#icon') format('svg');
+	src: url('./icon.eot?time=1461856940307#iefix') format('eot'),
+		url('./icon.woff?time=1461856940307') format('woff'),
+		url('./icon.ttf?time=1461856940307') format('truetype'),
+		url('./icon.svg?time=1461856940307#icon') format('svg');
 }
 
 .icon:before {
